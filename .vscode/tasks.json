@@ -9,7 +9,8 @@
 				"-g3",
 				"-std=c++17",
 				"-Wall",
-				"--pedantic-errors",
+				"-Wextra",
+				"-pedantic-errors",
 				"${file}",
 				"-o",
 				"${fileDirname}/${fileBasenameNoExtension}.out"

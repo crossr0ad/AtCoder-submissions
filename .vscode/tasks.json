@@ -10,6 +10,7 @@
 				"-Wall",
 				"-Wextra",
 				"-O0",
+				"-g3",
 				"-ggdb3",
 				"-DONLINE_JUDGE",
 				"-I/opt/boost/gcc/include",
@@ -25,7 +26,10 @@
 			"problemMatcher": [
 				"$gcc"
 			],
-			"group": "build",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
 			"detail": "コンパイラ: /usr/bin/g++"
 		}
 	]

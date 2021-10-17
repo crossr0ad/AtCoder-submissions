@@ -19,3 +19,8 @@
   - もし最終的な返り値がlong longなら`0LL`とする
 - std::setの初期化は`{}`で行う
   ― 例: `std::set<int> s{1, 2, 3};`
+- coutの右に三項演算子を入れる場合は、値全体を括弧で括る
+  - 例: `cout << (a < c ? "Yes" : "No") << endl;`
+- std::setprecision()で出力桁数の指定
+  - その前に`std::fixed`を付けると小数点以下の桁数指定になる
+  - 例: `cout << fixed << setprecision(15) << f << endl;`

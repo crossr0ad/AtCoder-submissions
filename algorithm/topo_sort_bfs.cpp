@@ -24,7 +24,7 @@ int main() {
     cin.tie(nullptr);
     ios::sync_with_stdio(false);
 
-    int N, M;
+    int N, M;  // N: |V|, M: |E|
     cin >> N >> M;
 
     Graph G(N);
@@ -37,7 +37,8 @@ int main() {
         numIn.at(b - 1)++;
     }
 
-    priority_queue<int, vector<int>> que;
+    priority_queue<int> que;  // pop descending
+    // priority_queue<int, vector<int>, greater<int>> que; // pop ascending
     for (int i = 0; i < N; i++) {
         if (numIn.at(i) == 0) {
             que.push(i);
@@ -60,7 +61,7 @@ int main() {
         G.at(top).clear();
     }
 
-    if (!all_of(G.begin(), G.end(), [](auto v) { return v.empty(); })) {
+    if (any_of(G.begin(), G.end(), [](auto v) { return !v.empty(); })) {
         cout << -1 << endl;
         return 0;
     }

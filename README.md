@@ -24,6 +24,8 @@
 - std::setprecision()で出力桁数の指定
   - その前にstd::fixedを付けると小数点以下の桁数指定になる
   - 例: `cout << fixed << setprecision(15) << f << endl;`
+- std::setfill()とstd::setw()を組み合わせると0埋めができる
+  - 例: `cout << setfill('0') << setw(3) << 1 << endl;`
 - std::next_permutation()で引数の順列を次に変更する
   - すべての順列を繰り返しで取得したい場合、初期値はソート済みである必要がある
 - std::lower_boundの後にインデックスを取得したい場合、std::setではなくstd::vectorを使う

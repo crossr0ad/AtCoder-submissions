@@ -1,6 +1,5 @@
 {
-    "files.associations": {
-        "*.json": "jsonc",
-        "iostream": "cpp"
-    }
+    "conventionalCommits.scopes": [
+        "abc"
+    ]
 }
